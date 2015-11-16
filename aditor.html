@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>RG Ad Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container" style="margin: 40px 0;">
+    <div class="row">
+      <div class="col-md-4">
+                <h6>HTML preview</h6>
+        <div id="rg-ad-content">
+        <style>
+        body {
+          margin: 0 !important;
+        }
+        .rg-ad {
+          font-family: Helvetica, Arial, sans-serif;
+          padding: 20px;
+          width: 336px;
+          height: 280px;
+          display:block;
+          text-decoration: none;
+          color: #333;
+          text-align: center;
+          box-sizing: border-box;
+          border: 1px solid #eaeaea;
+          background-color: #fff;
+        }
+        .rg-ad:hover {
+          color: inherit;
+          text-decoration: none;
+        }
+        .rg-ad-title, .rg-ad-desc {
+          margin: 10px 0;
+        }
+        .rg-ad-btn {
+          margin: 20px 0 0 0;
+        }
+        .rg-ad-img {
+          max-height: 100px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .rg-ad-title {
+          font-size: 20px;
+          font-weight: normal;
+        }
+        .rg-ad-desc {
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 20px;
+          max-height: 40px;
+          overflow: hidden;
+        }
+        .rg-ad-btn {
+          display: block;
+          padding: 6px 0;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          border-radius: 2px;
+          color: #fff;
+          background: #55b1f5;
+          box-shadow: inset 0 -2px rgba(0,0,0,0.3);
+          border: 0;
+          line-height: 18px;
+        }
+        </style>
+        <a href="%%CLICK_URL_UNESC%%%%DEST_URL_ESC%%" target="_blank" class="rg-ad" id="rg-ad">
+          <img class="rg-ad-img" id="rg-ad-img" src="#" />
+          <h3 class="rg-ad-title" id="rg-ad-title">This is the headline</h3>
+          <p class="rg-ad-desc" id="rg-ad-desc">We recommend jobs based on the information in your profile.
+            Complete your profile to get the best suggestions.</p>
+            <div class="rg-ad-btn" id="rg-ad-btn">This is the button</div>
+        </a>
+        </div>
+        <hr>
+        <h6>Image preview</h6>
+        <p>
+        <canvas id="output-canvas" width="336px" height="280px" style="padding: 0; display:block; margin: 0;"></canvas>
+        </p>
+        <a href="#" id="js-download-image" class="btn btn-default">Download image</a>
+      </div>
+
+      <div class="col-md-8">
+        <h3>New thing</h3>
+        <div class="form-group">
+          <label>
+            Sparkly new
+          </label>
+          <input type="text" placeholder="Text" data-target="rg-ad-title" class="js-input-text form-control">
+        </div>
+        <h3>Text</h3>
+        <div class="form-group">
+          <label>
+            Title
+          </label>
+          <input type="text" placeholder="Text" data-target="rg-ad-title" class="js-input-text form-control">
+        </div>
+        <div class="form-group">
+          <label>
+            Description
+          </label>
+          <input type="text" placeholder="Text" data-target="rg-ad-desc" class="js-input-text form-control">
+        </div>
+        <div class="form-group">
+          <label>Button
+          </label>
+          <input type="text" placeholder="Text" data-target="rg-ad-btn" class="js-input-text form-control">
+        </div>
+        <h3>Colors</h3>
+        <div class="form-group">
+          <label>
+            Ad background
+          </label>
+        <input type="text" placeholder="Color" data-target="rg-ad" data-style-prop="backgroundColor" class="js-input-color form-control">
+        </div>
+
+        <div class="form-group">
+          <label>
+            Ad text
+          </label>
+        <input type="text" placeholder="Color" data-target="rg-ad" data-style-prop="color" class="js-input-color form-control">
+        </div>
+
+        <div class="form-group">
+          <label>
+            Button background
+          </label>
+        <input type="text" placeholder="Color" data-target="rg-ad-btn" data-style-prop="backgroundColor" class="js-input-color form-control">
+        </div>
+
+        <div class="form-group">
+          <label>
+            Button text
+          </label>
+        <input type="text" placeholder="Color" data-target="rg-ad-btn" data-style-prop="color" class="js-input-color form-control">
+      </div>
+        <h3>Image</h3>
+        <div class="form-group">
+          <label>Upload image
+            <input type="file" id="files" name="files[]" />
+          </label>
+        </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" checked="checked" id="show-img"> Show image
+            </label>
+          </div>
+        </div>
+        <h3>Output for DFP</h3>
+        <div class="form-group">
+          <label>Output</label><br>
+          <button type="button" id="output-update" class="btn btn-primary">Update output</button><br>
+        </div>
+        <div class="form-group">
+          <textarea id="output" style="box-sizing: border-box; width: 100%; height: 300px;"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cburgmer.github.com/rasterizeHTML.js/rasterizeHTML.allinone.js"></script>
+<script type="text/javascript">
+/**
+* Convert an image
+* to a base64 url
+* @param  {String}   url
+* @param  {Function} callback
+* @param  {String}   [outputFormat=image/png]
+*/
+//variables
+var link = document.getElementById('js-download-image');
+
+function convertImgToBase64URL(url, callback, outputFormat) {
+  var img = new Image();
+  img.crossOrigin = 'Anonymous';
+  img.onload = function () {
+    var canvas = document.createElement('CANVAS'),
+    ctx = canvas.getContext('2d'),
+    dataURL;
+    canvas.height = this.height;
+    canvas.width = this.width;
+    ctx.drawImage(this, 0, 0);
+    dataURL = canvas.toDataURL(outputFormat);
+    callback(dataURL);
+    canvas = null;
+  };
+  img.src = url;
+}
+
+convertImgToBase64URL("http://lorempixel.com/200/150/business/", function (dataURL) {
+  //console.log(dataURL);
+  //document.getElementById('rg-ad-img').src = dataURL;
+});
+
+function handleFileSelect(evt) {
+  var files = evt.target.files; // FileList object
+
+  // Loop through the FileList and render image files as thumbnails.
+  for (var i = 0, f; f = files[i]; i++) {
+
+    // Only process image files.
+    if (!f.type.match('image.*')) {
+      continue;
+    }
+
+    var reader = new FileReader();
+
+    // Closure to capture the file information.
+    reader.onload = (function (theFile) {
+      return function (e) {
+        // Render thumbnail.
+        document.getElementById('rg-ad-img').src = e.target.result;
+      };
+    })(f);
+
+    // Read in the image file as a data URL.
+    reader.readAsDataURL(f);
+  }
+}
+
+function updateOutput(e) {
+  e.preventDefault();
+
+  var textInputs = document.querySelectorAll('.js-input-text');
+
+  for (var i = 0; i < textInputs.length; ++i) {
+    var el = textInputs[i];
+    var targetId = el.getAttribute('data-target');
+    var val = el.value;
+    document.getElementById(targetId).innerHTML = val;
+  }
+
+  var colorInputs = document.querySelectorAll('.js-input-color');
+
+  for (var i = 0; i < colorInputs.length; ++i) {
+    var el = colorInputs[i];
+    var targetId = el.getAttribute('data-target');
+    var styleProp = el.getAttribute('data-style-prop')
+    var val = el.value;
+    document.getElementById(targetId).style[styleProp] = val;
+  }
+
+  var showImg = document.getElementById('show-img').checked;
+  var img = document.getElementById('rg-ad-img');
+  if(showImg) {
+    img.setAttribute('style', 'display:block;');
+  } else {
+
+    img.setAttribute('style', 'display:none;');
+  }
+
+  var adContent = document.getElementById('rg-ad-content').innerHTML.trim();
+  //var adContent = "<div style='background:red;'>hi</div>"
+  document.getElementById('output').value = adContent;
+
+  var canvas = document.getElementById('output-canvas');
+
+
+/* get html and generate an image in canvas */
+rasterizeHTML.drawHTML(adContent, canvas);
+
+
+//link.addEventListener('click', function(ev) {
+    link.href = canvas.toDataURL();
+    link.download = "image.png";
+//},
+//false);
+}
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+document.getElementById('output-update').addEventListener('click', updateOutput, false);
+</script>
+</body>
+</html>
