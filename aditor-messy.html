@@ -80,6 +80,11 @@
           left: 400px;
           z-index: 2;
         }
+        textarea {
+          position: relative;
+          left: 400px;
+          z-index: 2;
+        }
 
         </style>
         <div id="rg-ad-div"
@@ -107,11 +112,14 @@
           var TextInput = React.createClass({
 
               getInitialState: function() {
-                return {value: "title", input2: "description", input3: "button"};
+                return {input1: "title", input2: "description", input3: "button"};
               },
 
               textUpdate: function() {
-                this.setState({value: this.refs.textarea.value});
+                this.setState({input1: this.refs.textarea.value});
+                this.setState({input2: this.refs.textarea.value});
+                this.setState({input3: this.refs.textarea.value});
+
           //console.log(this);
               },
 
@@ -123,12 +131,14 @@
                 return (
                   <div>
                   <div id="ad-field">
-                  <h1>{this.state.value}</h1>
+                  <h1>{this.state.input1}</h1>
                   <p>{this.state.input2}</p>
                   <button>{this.state.input3}</button>
                   </div>
                     <div id="form-field">
-                    <input type="text" defaultValue={this.state.value} ref="textarea" onChange={this.textUpdate} />
+                    <input type="text" defaultValue={this.state.input1} ref="textarea" onChange={this.textUpdate} />
+                    <textarea defaultValue={this.state.input2} ref="textarea" onChange={this.textUpdate}/>
+                    <input type="text" defaultValue={this.state.input3} ref="textarea" onChange={this.textUpdate}/>
                     </div>
                   </div>
                 );
