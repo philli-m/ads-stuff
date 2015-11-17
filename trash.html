@@ -132,7 +132,7 @@
             <div class="rg-ad-btn" id="rg-ad-btn">This is the button</div></div>
         </a>
         </div>
-
+        <div>
         <hr>
         <h6>Image preview</h6>
         <p>
@@ -141,44 +141,30 @@
         <a href="#" id="js-download-image" class="btn btn-default">Download image</a>
       </div>
 
-      <div class="col-md-8">
-
-
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <h3>Image</h3>
-        <div class="form-group">
-          <label>Upload image
-            <input type="file" id="files" name="files[]" />
+      <h3>Image</h3>
+      <div class="form-group">
+        <label>Upload image
+          <input type="file" id="files" name="files[]" />
+        </label>
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked="checked" id="show-img"> Show image
           </label>
         </div>
-        <div class="form-group">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" checked="checked" id="show-img"> Show image
-            </label>
-          </div>
-        </div>
-        <h3>Output for DFP</h3>
-        <div class="form-group">
-          <label>Output</label><br>
-          <button type="button" id="output-update" class="btn btn-primary">Update output</button><br>
-        </div>
-        <div class="form-group">
-          <textarea id="output" style="box-sizing: border-box; width: 100%; height: 300px;"></textarea>
-        </div>
+      </div>
+      <h3>Output for DFP</h3>
+      <div class="form-group">
+        <label>Output</label><br>
+        <button type="button" id="output-update" class="btn btn-primary">Update output</button><br>
+      </div>
+      <div class="form-group">
+        <textarea id="output" style="box-sizing: border-box; width: 100%; height: 300px;"></textarea>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -189,115 +175,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
 <script type="text/javascript">
-/**
-* Convert an image
-* to a base64 url
-* @param  {String}   url
-* @param  {Function} callback
-* @param  {String}   [outputFormat=image/png]
-*/
-//variables
-var link = document.getElementById('js-download-image');
-
-function convertImgToBase64URL(url, callback, outputFormat) {
-  var img = new Image();
-  img.crossOrigin = 'Anonymous';
-  img.onload = function () {
-    var canvas = document.createElement('CANVAS'),
-    ctx = canvas.getContext('2d'),
-    dataURL;
-    canvas.height = this.height;
-    canvas.width = this.width;
-    ctx.drawImage(this, 0, 0);
-    dataURL = canvas.toDataURL(outputFormat);
-    callback(dataURL);
-    canvas = null;
-  };
-  img.src = url;
-}
-
-convertImgToBase64URL("http://lorempixel.com/200/150/business/", function (dataURL) {
-  //console.log(dataURL);
-  //document.getElementById('rg-ad-img').src = dataURL;
-});
-
-function handleFileSelect(evt) {
-  var files = evt.target.files; // FileList object
-
-  // Loop through the FileList and render image files as thumbnails.
-  for (var i = 0, f; f = files[i]; i++) {
-
-    // Only process image files.
-    if (!f.type.match('image.*')) {
-      continue;
-    }
-
-    var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (function (theFile) {
-      return function (e) {
-        // Render thumbnail.
-        document.getElementById('rg-ad-img').src = e.target.result;
-      };
-    })(f);
-
-    // Read in the image file as a data URL.
-    reader.readAsDataURL(f);
-  }
-}
-
-function updateOutput(e) {
-  e.preventDefault();
-
-  var textInputs = document.querySelectorAll('.js-input-text');
-
-  for (var i = 0; i < textInputs.length; ++i) {
-    var el = textInputs[i];
-    var targetId = el.getAttribute('data-target');
-    var val = el.value;
-    document.getElementById(targetId).innerHTML = val;
-  }
-
-  var colorInputs = document.querySelectorAll('.js-input-color');
-
-  for (var i = 0; i < colorInputs.length; ++i) {
-    var el = colorInputs[i];
-    var targetId = el.getAttribute('data-target');
-    var styleProp = el.getAttribute('data-style-prop')
-    var val = el.value;
-    document.getElementById(targetId).style[styleProp] = val;
-  }
-
-  var showImg = document.getElementById('show-img').checked;
-  var img = document.getElementById('rg-ad-img');
-  if(showImg) {
-    img.setAttribute('style', 'display:block;');
-  } else {
-
-    img.setAttribute('style', 'display:none;');
-  }
-
-  var adContent = document.getElementById('rg-ad-content').innerHTML.trim();
-  //var adContent = "<div style='background:red;'>hi</div>"
-  document.getElementById('output').value = adContent;
-
-  var canvas = document.getElementById('output-canvas');
-
-
-/* get html and generate an image in canvas */
-rasterizeHTML.drawHTML(adContent, canvas);
-
-
-//link.addEventListener('click', function(ev) {
-    link.href = canvas.toDataURL();
-    link.download = "image.png";
-//},
-//false);
-}
-
-document.getElementById('files').addEventListener('change', handleFileSelect, false);
-document.getElementById('output-update').addEventListener('click', updateOutput, false);
-</script>
-</body>
-</html>
