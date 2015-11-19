@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>RG Ad Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="myDiv">
+      <!-- This element's contents will be replaced with your component. -->
+  </div>
+  <div id="myDiv2">
+      <!-- This element's contents will be replaced with your component. -->
+  </div>
+</div>
+  <!-- <div class="form-group" id="form-group-id">
+    <h4 class="labels-react">Title text: </h4>
+    <input type="text" maxLength="20" defaultValue={this.state.input1} ref="textarea1" onChange={this.textUpdate} />
+    <h4 class="labels-react">Description text: </h4>
+    <input type="text" maxLength="20" defaultValue={this.state.input2} ref="textarea2" onChange={this.textUpdate}/>
+    <h4 class="labels-react">Button text:</h4>
+    <input type="text" maxLength="20" defaultValue={this.state.input3} ref="textarea3" onChange={this.textUpdate}/>
+  </div> -->
+    <script type="text/babel">
+
+    var MyComponent1 = React.createClass({
+      getInitialState: function() {
+        return {input1: "title", input2: "description", input3: "button"};
+      },
+      textUpdate: function() {
+        this.setState({input1: this.props.textarea1.value});
+        this.setState({input2: this.props.textarea2.value});
+        this.setState({input3: this.props.textarea3.value});
+      },
+
+      render: function(){
+          return (
+            <div>
+              <input id="input1" type="text" maxLength="20"/>
+              <input id="input2" type="text" maxLength="20"/>
+              <input id="input3" type="text" maxLength="20"/>
+            </div>
+          );
+      },
+    });
+
+    var MyComponent2 = React.createClass({
+      incrementCount: function() {
+        this.setState({
+          count: this.state.count + 1
+        });
+      },
+      getInitialState: function() {
+        return {
+          count: 0
+        }
+      },
+    render: function() {
+      return (
+        <div class="my-component">
+          <h1> Count: {this.state.count}</h1>
+          <button type="button" onClick={this.incrementCount}>{this.props.textarea3.value}</button>
+          </div>
+      );
+    }
+  });
+  React.render(
+      <MyComponent1 name="philli"/>,
+      document.getElementById('myDiv')
+  );
+    React.render(
+        <MyComponent2 name="philli"/>,
+        document.getElementById('myDiv2')
+    );
+
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cburgmer.github.com/rasterizeHTML.js/rasterizeHTML.allinone.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+<script src="jscolor.js"></script>
+
+<script type="text/javascript">
+</script>
+</body>
+</html>

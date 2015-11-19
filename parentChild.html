@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>RG Ad Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div id="content">
+  <div id="myDiv1">
+      <!-- This element's contents will be replaced with your component. -->
+  </div>
+  <div id="myDiv2">
+      <!-- This element's contents will be replaced with your component. -->
+  </div>
+</div>
+
+    <script type="text/babel">
+
+    var Child = React.createClass({
+      render: function () {
+        return <div id="ad">
+              <h1>title</h1>
+              <p>Description</p>
+              <button>I am a button</button>
+              </div>;
+      },
+    });
+
+
+    var Parent = React.createClass({
+      getInitialState: function() {
+        return {ChildInput1: "title", ChildInput2: "description", ChildInput3: "button"};
+    },
+
+    render: function () {
+      return (
+        <div id="form">
+          <h4>Title text: </h4>
+          <input type="text" maxLength="20" onChange={this.textUpdate}/>
+          <h4>Description text: </h4>
+          <input type="text" maxLength="20" onChange={this.textUpdate}/>
+          <h4>Button text:</h4>
+          <input type="text" maxLength="20"  onChange={this.textUpdate}/>
+        </div>
+      );
+    },
+
+    textUpdate: function(event) {
+      this.setState({input1: this.state.input1.value});
+      this.setState({input2: this.state.input2.value});
+      this.setState({input3: this.state.input3.value});
+    },
+  });
+
+  ReactDOM.render(
+    <Parent />, document.getElementById('myDiv2'));
+    ReactDOM.render(
+        <Child/>,
+        document.getElementById('myDiv1')
+    );
+
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cburgmer.github.com/rasterizeHTML.js/rasterizeHTML.allinone.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+<script src="jscolor.js"></script>
+
+<script type="text/javascript">
+</script>
+</body>
+</html>
