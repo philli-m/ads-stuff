@@ -7,93 +7,37 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-  <div id="Mydiv"></div>
+
   <div id="Mydiv2"></div>
-  <div id="Mydiv3"></div>
-  <div id="Mydiv4"></div>
 
-  <script type="text/babel">
+  <script type="text/jsx">
 
-    var TextColor = React.createClass({
-      render: function() {
-        return (
-              <input className="jscolor"/>
-        );
-      }
-    });
-
-    var TitleInput = React.createClass({
-
+    var Editor = React.createClass({
       getInitialState: function() {
-          return {input1: "title"};
-      },
-
-      textUpdate: function() {
-        this.setState({input1: this.refs.textarea1.value});
-
+        return {text: "hello"};
       },
       render: function() {
         return (
           <div>
-          <h1>{this.state.input1}</h1>
-              <input type="text" maxLength="20" defaultValue={this.state.input1} ref="textarea1" onChange={this.textUpdate} />
+            <Input value={this.state.text} />,
           </div>
         );
       }
     });
 
-    var DescriptionInput = React.createClass({
-
-        getInitialState: function() {
-          return {input2: "description"};
-        },
-
-        textUpdate: function() {
-          this.setState({input2: this.refs.textarea2.value});
-        },
-
+    var Input = React.createClass({
+        handleChange: function(event) {
+          this.setState({value: event.target.value});
+          },
         render: function() {
           return (
-            <div>
-            <p>{this.state.input2}</p>
-                <input type="text" maxLength="20" defaultValue={this.state.input2} ref="textarea2" onChange={this.textUpdate} />
-            </div>
+              <input type="text" maxLength="20" value={value} onChange={this.handleChange} />
           );
         }
     });
 
-    var ButtonInput = React.createClass({
-
-          getInitialState: function() {
-            return {input3: "button"};
-          },
-
-          textUpdate: function() {
-            this.setState({input3: this.refs.textarea3.value});
-
-          },
-
-          render: function() {
-            return (
-              <div>
-              <button>{this.state.input3}</button>
-                  <input type="text" maxLength="20" defaultValue={this.state.input3} ref="textarea3" onChange={this.textUpdate} />
-              </div>
-            );
-          }
-      });
-
     ReactDOM.render(
-      <TitleInput/>, document.getElementById('Mydiv'));
-
-      ReactDOM.render(
-        <TextColor/>, document.getElementById('Mydiv4'));
-
-    ReactDOM.render(
-      <DescriptionInput/>, document.getElementById('Mydiv2'));
-
-      ReactDOM.render(
-        <ButtonInput/>, document.getElementById('Mydiv3'));
+      <Editor />, document.getElementById('Mydiv2'));
 
 </script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

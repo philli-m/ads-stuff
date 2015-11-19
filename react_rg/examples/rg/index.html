@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../shared/css/base.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/react-dom.js"></script>
+    <script type="text/jsx">
+      var Editor = React.createClass({
+        render: function() {
+          return (
+            <div>
+              <Input value={this.props.text} />
+            </div>
+          );
+        }
+      });
+
+      var Input = React.createClass({
+          render: function() {
+            return (
+              <input type="text" maxLength="20" value={this.props.value} onChange={this.handleChange} />
+            );
+          }
+      });
+
+      ReactDOM.render(
+        <Editor data={"text": "hello"} />, document.getElementById('app')
+      );
+    </script>
+
+  </body>
+</html>

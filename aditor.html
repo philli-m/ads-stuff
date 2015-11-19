@@ -118,28 +118,28 @@
           <label>
             Ad background
           </label>
-        <input class="jscolor {hash:true}" type="text" placeholder="Color" data-target="rg-ad" data-style-prop="backgroundColor" class="js-input-color form-control">
+        <input class="jscolor {hash:true} form-control" type="text" placeholder="Color" data-target="rg-ad" data-style-prop="backgroundColor">
         </div>
 
         <div class="form-group">
           <label>
             Ad text
           </label>
-        <input type="text" placeholder="Color" data-target="rg-ad" data-style-prop="color" class="js-input-color form-control">
+        <input class="jscolor form-control" type="text" placeholder="Color" data-target="rg-ad" data-style-prop="color" >
         </div>
 
         <div class="form-group">
           <label>
             Button background
           </label>
-        <input type="text" placeholder="Color" data-target="rg-ad-btn" data-style-prop="backgroundColor" class="js-input-color form-control">
+        <input class="jscolor form-control" type="text" placeholder="Color" data-target="rg-ad-btn" data-style-prop="backgroundColor" >
         </div>
 
         <div class="form-group">
           <label>
             Button text
           </label>
-        <input type="text" placeholder="Color" data-target="rg-ad-btn" data-style-prop="color" class="js-input-color form-control">
+        <input class="jscolor form-control" type="text" placeholder="Color" data-target="rg-ad-btn" data-style-prop="color"  >
       </div>
         <h3>Image</h3>
         <div class="form-group">
@@ -233,7 +233,7 @@ function handleFileSelect(evt) {
 function updateOutput(e) {
   e.preventDefault();
 
-  var textInputs = document.querySelectorAll('.js-input-text');
+  var textInputs = document.querySelectorAll('.jscolor');
 
   for (var i = 0; i < textInputs.length; ++i) {
     var el = textInputs[i];
@@ -242,7 +242,7 @@ function updateOutput(e) {
     document.getElementById(targetId).innerHTML = val;
   }
 
-  var colorInputs = document.querySelectorAll('.js-input-color');
+  var colorInputs = document.querySelectorAll('.jscolor');
 
   for (var i = 0; i < colorInputs.length; ++i) {
     var el = colorInputs[i];
