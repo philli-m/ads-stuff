@@ -24,7 +24,7 @@
         return <div id="ad">
               <h1>title</h1>
               <p>Description</p>
-              <button>I am a button</button>
+              <button>I</button>
               </div>;
       },
     });
@@ -39,11 +39,11 @@
       return (
         <div id="form">
           <h4>Title text: </h4>
-          <input type="text" maxLength="20" onChange={this.textUpdate}/>
+          <input type="text" maxLength="20" defaultValue={this.state.input1.value}  onChange={this.textUpdate} />
           <h4>Description text: </h4>
-          <input type="text" maxLength="20" onChange={this.textUpdate}/>
+          <input type="text" maxLength="20" defaultValue={this.state.input2.value} onChange={this.textUpdate}/>
           <h4>Button text:</h4>
-          <input type="text" maxLength="20"  onChange={this.textUpdate}/>
+          <input type="text" maxLength="20" defaultValue={this.state.input3.value} onChange={this.textUpdate}/>
         </div>
       );
     },

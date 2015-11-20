@@ -22,7 +22,15 @@
     <input type="text" maxLength="20" defaultValue={this.state.input2} ref="textarea2" onChange={this.textUpdate}/>
     <h4 class="labels-react">Button text:</h4>
     <input type="text" maxLength="20" defaultValue={this.state.input3} ref="textarea3" onChange={this.textUpdate}/>
-  </div> -->
+  </div>
+  
+  var TextColor = React.createClass({
+    render: function() {
+      return (
+            <input className="jscolor"/>
+      );
+    }
+  });-->
     <script type="text/babel">
 
     var MyComponent1 = React.createClass({
@@ -66,6 +74,7 @@
       );
     }
   });
+
   React.render(
       <MyComponent1 name="philli"/>,
       document.getElementById('myDiv')
