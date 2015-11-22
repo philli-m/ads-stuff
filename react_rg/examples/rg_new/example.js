@@ -10,24 +10,33 @@ var Editor = React.createClass({
 
 var Input = React.createClass({
   getInitialState: function() {
+    console.log(this)
     return {value: this.props.value,
             header: this.props.value,
             paragraph: this.props.value,
             button: this.props.value};
   },
   handleChange: function(event) {
-    this.setState({value: event.target.value});
-    this.setState({header: event.target.value});
-    this.setState({paragraph: event.target.value});
-    this.setState({button: event.target.value});
+    console.log("name", event.target.name)
+    console.log("value", event.target.value)
+
+    // because 'name' changes for each child object, we need to set
+    // the `changeSet` this way, instead of using an object literal
+    // like we would normally
+
+    var changeSet = {}
+    changeSet[event.target.name] = event.target.value;
+
+    this.setState(changeSet)
+
   },
 
   render: function() {
     return (
       <div>
-      <Output value={this.state.value} handleChange={this.handleChange} />
-      <Output2 value={this.state.value} handleChange={this.handleChange} />
-      <Output3 value={this.state.value} handleChange={this.handleChange} />
+      <Output  value={this.state.value}  handleChange={this.handleChange} />
+      <Output2 value={this.state.header} handleChange={this.handleChange} />
+      <Output3 value={this.state.button} handleChange={this.handleChange} />
 
       </div>
     );
@@ -38,7 +47,7 @@ var Output = React.createClass({
   render: function() {
     return (
       <div>
-      <input type="text" onChange={this.props.handleChange} />
+      <input name="value" type="text" onChange={this.props.handleChange} />
       <h2>{this.props.value}</h2>
       </div>
     );
@@ -49,7 +58,7 @@ var Output2 = React.createClass({
   render: function(){
     return (
       <div>
-      <input type="text" onChange={this.props.handleChange} />
+      <input name="header" type="text" onChange={this.props.handleChange} />
       <h3>{this.props.value}</h3>
       </div>
     );
@@ -59,7 +68,7 @@ var Output3 = React.createClass({
   render: function(){
     return (
       <div>
-      <input type="text" onChange={this.props.handleChange} />
+      <input name="button" type="text" onChange={this.props.handleChange} />
       <button> {this.props.value} </button>
       </div>
     );
