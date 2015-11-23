@@ -2,12 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Basic Example with External JSX</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>RG Ad Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../shared/css/base.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
-    <div id="app"></div>
-    <script src="../../build/react.js"></script>
+    <div id="app">
+    </div>
+    <div>
+      <h3>Image</h3>
+      <div class="form-group">
+        <label>Upload image
+          <input type="file" id="files" name="files[]" />
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" checked="checked" id="show-img"> Show image
+        </label>
+      </div>
+    </div>
+    <script src="../../build/react-with-addons.js"></script>
     <script src="../../build/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
     <script type="text/babel" src="example.js"></script>
