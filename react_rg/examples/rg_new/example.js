@@ -1,4 +1,4 @@
-var update = React.addons.update;
+  var update = React.addons.update;
 
 var Editor = React.createClass({
   getInitialState: function() {
@@ -27,7 +27,7 @@ var Editor = React.createClass({
               <label>Header</label><br></br>
               <InputText name="header" property="text" maxLength="30" value={this.state.header.text}  handleChange={this.handleChange} />
               <label>Text Shadow</label>
-              <TextShadow name="header" type="checkbox" hasShadow={this.state.header.shadow} hasShadow={this.handleChange}/>
+              <TextShadow name="header" type="checkbox" hasShadow={this.state.header.shadow} handleChange={this.handleChange}/>
             </div>
             <div class="form-group">
               <label>Description</label><br></br>
@@ -55,9 +55,9 @@ var Editor = React.createClass({
             </div>
             <div class="form-group">
               <label>Ad Color</label><br></br>
-              <InputColor name="adBlock" property="color" value={this.state.adBlock.color}  handleChange={this.handleChange} />
+              <InputColor name="adBackground" property="color" value={this.state.adBackground.color}  handleChange={this.handleChange} />
               <label>Boarder</label>
-              <TextShadow name="border" type="checkbox" checked="checked" />
+              <TextShadow name="headerShadow" type="checkbox" checked="checked" />
             </div>
             <div class="form-group">
               <label>Button Color</label><br></br>
@@ -65,7 +65,7 @@ var Editor = React.createClass({
             </div>
           </div>
 
-        <div id="appOutput" name="adBlock"  style={{backgroundColor: this.state.adBlock.color}} style={{border: this.state.adBlock.border}}>
+        <div id="appOutput" name="adBackground"  style={{backgroundColor: this.state.adBackground.color}} style={{boarder: this.state.adBackground.boarder}}>
           <img class="rg-ad-img" id="rg-ad-img" src="#" />
           <h3 style={{color: this.state.header.color}} style={{textShadow: this.state.header.shadow}}>{this.state.header.text} </h3>
           <p style={{color: this.state.paragraph.color}}>{this.state.paragraph.text}</p>
@@ -122,9 +122,9 @@ var appData = {
   buttonBackground: {
     color: "blue"
   },
-  adBlock: {
+  adBackground: {
     color: "white",
-    border: "3px solid black"
+    boarder: "black 3px"
   },
 
 };
