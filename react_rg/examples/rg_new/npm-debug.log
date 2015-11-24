@@ -1,0 +1,593 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'react-color-picker',
+1 verbose cli   '--save' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose read json /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/package.json
+5 verbose read json /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/package.json
+6 verbose cache add [ 'react-color-picker', null ]
+7 verbose cache add name=undefined spec="react-color-picker" args=["react-color-picker",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'react-color-picker',
+8 verbose parsed url   path: 'react-color-picker',
+8 verbose parsed url   href: 'react-color-picker' }
+9 silly lockFile 7be53fbd-react-color-picker react-color-picker
+10 verbose lock react-color-picker /Users/phillippa/.npm/7be53fbd-react-color-picker.lock
+11 silly lockFile 7be53fbd-react-color-picker react-color-picker
+12 silly lockFile 7be53fbd-react-color-picker react-color-picker
+13 verbose addNamed [ 'react-color-picker', '' ]
+14 verbose addNamed [ null, '' ]
+15 silly lockFile b530dd88-react-color-picker react-color-picker@
+16 verbose lock react-color-picker@ /Users/phillippa/.npm/b530dd88-react-color-picker.lock
+17 silly addNameRange { name: 'react-color-picker', range: '', hasData: false }
+18 verbose url raw react-color-picker
+19 verbose url resolving [ 'https://registry.npmjs.org/', './react-color-picker' ]
+20 verbose url resolved https://registry.npmjs.org/react-color-picker
+21 info trying registry request attempt 1 at 23:15:22
+22 http GET https://registry.npmjs.org/react-color-picker
+23 http 200 https://registry.npmjs.org/react-color-picker
+24 silly registry.get cb [ 200,
+24 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly registry.get     etag: '"2UNSE0VP4U1E1L6FSLCDRBE7L"',
+24 silly registry.get     'content-type': 'application/json',
+24 silly registry.get     'cache-control': 'max-age=60',
+24 silly registry.get     'content-length': '35451',
+24 silly registry.get     'accept-ranges': 'bytes',
+24 silly registry.get     date: 'Mon, 23 Nov 2015 22:15:20 GMT',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     age: '0',
+24 silly registry.get     connection: 'keep-alive',
+24 silly registry.get     'x-served-by': 'cache-lhr6330-LHR',
+24 silly registry.get     'x-cache': 'MISS',
+24 silly registry.get     'x-cache-hits': '0',
+24 silly registry.get     'x-timer': 'S1448316920.685093,VS0,VE201',
+24 silly registry.get     vary: 'Accept' } ]
+25 silly addNameRange number 2 { name: 'react-color-picker', range: '', hasData: true }
+26 silly addNameRange versions [ 'react-color-picker',
+26 silly addNameRange   [ '1.0.1',
+26 silly addNameRange     '1.1.0',
+26 silly addNameRange     '1.2.0',
+26 silly addNameRange     '1.3.0',
+26 silly addNameRange     '1.3.1',
+26 silly addNameRange     '1.3.2',
+26 silly addNameRange     '1.4.0',
+26 silly addNameRange     '1.4.1',
+26 silly addNameRange     '2.0.0',
+26 silly addNameRange     '2.0.1',
+26 silly addNameRange     '2.1.0',
+26 silly addNameRange     '2.1.1',
+26 silly addNameRange     '2.1.2',
+26 silly addNameRange     '2.1.3',
+26 silly addNameRange     '2.1.4',
+26 silly addNameRange     '2.1.5',
+26 silly addNameRange     '2.1.7',
+26 silly addNameRange     '2.1.9' ] ]
+27 verbose addNamed [ 'react-color-picker', '2.1.9' ]
+28 verbose addNamed [ '2.1.9', '2.1.9' ]
+29 silly lockFile 31753dc4-react-color-picker-2-1-9 react-color-picker@2.1.9
+30 verbose lock react-color-picker@2.1.9 /Users/phillippa/.npm/31753dc4-react-color-picker-2-1-9.lock
+31 silly lockFile e3adf3d7-ker-react-color-picker-2-1-9-tgz https://registry.npmjs.org/react-color-picker/-/react-color-picker-2.1.9.tgz
+32 verbose lock https://registry.npmjs.org/react-color-picker/-/react-color-picker-2.1.9.tgz /Users/phillippa/.npm/e3adf3d7-ker-react-color-picker-2-1-9-tgz.lock
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-color-picker/-/react-color-picker-2.1.9.tgz',
+33 verbose addRemoteTarball   'a72d4d44edcc1b26a387dfe90dab2223f2ce4ada' ]
+34 info retry fetch attempt 1 at 23:15:22
+35 verbose fetch to= /var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/tmp.tgz
+36 http GET https://registry.npmjs.org/react-color-picker/-/react-color-picker-2.1.9.tgz
+37 http 200 https://registry.npmjs.org/react-color-picker/-/react-color-picker-2.1.9.tgz
+38 verbose tar unpack /var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/tmp.tgz
+39 silly lockFile 9af35761-22882-0-2517898704390973-package tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package
+40 verbose lock tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package /Users/phillippa/.npm/9af35761-22882-0-2517898704390973-package.lock
+41 silly lockFile 505ba027-22882-0-2517898704390973-tmp-tgz tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/tmp.tgz
+42 verbose lock tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/tmp.tgz /Users/phillippa/.npm/505ba027-22882-0-2517898704390973-tmp-tgz.lock
+43 silly gunzTarPerm modes [ '755', '644' ]
+44 silly gunzTarPerm extractEntry package.json
+45 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+46 silly gunzTarPerm extractEntry .npmignore
+47 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+48 silly gunzTarPerm extractEntry README.md
+49 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+50 silly gunzTarPerm extractEntry LICENSE
+51 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+52 silly gunzTarPerm extractEntry webpack.config.js
+53 silly gunzTarPerm modified mode [ 'webpack.config.js', 438, 420 ]
+54 silly gunzTarPerm extractEntry Gulpfile.js
+55 silly gunzTarPerm modified mode [ 'Gulpfile.js', 436, 420 ]
+56 silly gunzTarPerm extractEntry dist.config.js
+57 silly gunzTarPerm modified mode [ 'dist.config.js', 436, 420 ]
+58 silly gunzTarPerm extractEntry DIST_FILE_NAME.js
+59 silly gunzTarPerm modified mode [ 'DIST_FILE_NAME.js', 438, 420 ]
+60 silly gunzTarPerm extractEntry loaders.config.js
+61 silly gunzTarPerm modified mode [ 'loaders.config.js', 438, 420 ]
+62 silly gunzTarPerm extractEntry style.js
+63 silly gunzTarPerm modified mode [ 'style.js', 436, 420 ]
+64 silly gunzTarPerm extractEntry stylus.config.js
+65 silly gunzTarPerm modified mode [ 'stylus.config.js', 436, 420 ]
+66 silly gunzTarPerm extractEntry dist.min.config.js
+67 silly gunzTarPerm modified mode [ 'dist.min.config.js', 436, 420 ]
+68 silly gunzTarPerm extractEntry index.css
+69 silly gunzTarPerm modified mode [ 'index.css', 436, 420 ]
+70 silly gunzTarPerm extractEntry index.html
+71 silly gunzTarPerm modified mode [ 'index.html', 436, 420 ]
+72 silly gunzTarPerm extractEntry index.jsx
+73 silly gunzTarPerm modified mode [ 'index.jsx', 436, 420 ]
+74 silly gunzTarPerm extractEntry lib/HueSpectrum.js
+75 silly gunzTarPerm modified mode [ 'lib/HueSpectrum.js', 436, 420 ]
+76 silly gunzTarPerm extractEntry lib/SaturationSpectrum.js
+77 silly gunzTarPerm modified mode [ 'lib/SaturationSpectrum.js', 436, 420 ]
+78 silly gunzTarPerm extractEntry lib/defaultColor.js
+79 silly gunzTarPerm modified mode [ 'lib/defaultColor.js', 436, 420 ]
+80 silly gunzTarPerm extractEntry lib/index.js
+81 silly gunzTarPerm modified mode [ 'lib/index.js', 436, 420 ]
+82 silly gunzTarPerm extractEntry lib/utils/DragHelper.js
+83 silly gunzTarPerm modified mode [ 'lib/utils/DragHelper.js', 436, 420 ]
+84 silly gunzTarPerm extractEntry lib/utils/color.js
+85 silly gunzTarPerm modified mode [ 'lib/utils/color.js', 436, 420 ]
+86 silly gunzTarPerm extractEntry lib/utils/common.js
+87 silly gunzTarPerm modified mode [ 'lib/utils/common.js', 436, 420 ]
+88 silly gunzTarPerm extractEntry lib/utils/toStringValue.js
+89 silly gunzTarPerm modified mode [ 'lib/utils/toStringValue.js', 436, 420 ]
+90 silly gunzTarPerm extractEntry lib/utils/validate.js
+91 silly gunzTarPerm modified mode [ 'lib/utils/validate.js', 436, 420 ]
+92 silly gunzTarPerm extractEntry bower.json
+93 silly gunzTarPerm modified mode [ 'bower.json', 436, 420 ]
+94 silly gunzTarPerm extractEntry main.css
+95 silly gunzTarPerm modified mode [ 'main.css', 436, 420 ]
+96 silly gunzTarPerm extractEntry test.html
+97 silly gunzTarPerm modified mode [ 'test.html', 436, 420 ]
+98 silly gunzTarPerm extractEntry dist/react-color-picker.js
+99 silly gunzTarPerm modified mode [ 'dist/react-color-picker.js', 436, 420 ]
+100 silly gunzTarPerm extractEntry dist/react-color-picker.min.js
+101 silly gunzTarPerm modified mode [ 'dist/react-color-picker.min.js', 436, 420 ]
+102 silly gunzTarPerm extractEntry react-color-picker.sublime-project
+103 silly gunzTarPerm modified mode [ 'react-color-picker.sublime-project', 438, 420 ]
+104 silly gunzTarPerm extractEntry src/defaultColor.js
+105 silly gunzTarPerm modified mode [ 'src/defaultColor.js', 436, 420 ]
+106 silly gunzTarPerm extractEntry src/HueSpectrum.jsx
+107 silly gunzTarPerm modified mode [ 'src/HueSpectrum.jsx', 436, 420 ]
+108 silly gunzTarPerm extractEntry src/SaturationSpectrum.jsx
+109 silly gunzTarPerm modified mode [ 'src/SaturationSpectrum.jsx', 436, 420 ]
+110 silly gunzTarPerm extractEntry src/index.jsx
+111 silly gunzTarPerm modified mode [ 'src/index.jsx', 436, 420 ]
+112 silly gunzTarPerm extractEntry src/utils/color.js
+113 silly gunzTarPerm modified mode [ 'src/utils/color.js', 436, 420 ]
+114 silly gunzTarPerm extractEntry src/utils/common.js
+115 silly gunzTarPerm modified mode [ 'src/utils/common.js', 436, 420 ]
+116 silly gunzTarPerm extractEntry src/utils/toStringValue.js
+117 silly gunzTarPerm modified mode [ 'src/utils/toStringValue.js', 436, 420 ]
+118 silly gunzTarPerm extractEntry src/utils/validate.js
+119 silly gunzTarPerm modified mode [ 'src/utils/validate.js', 436, 420 ]
+120 silly gunzTarPerm extractEntry style/index.styl
+121 silly gunzTarPerm modified mode [ 'style/index.styl', 436, 420 ]
+122 silly gunzTarPerm extractEntry Makefile
+123 silly gunzTarPerm modified mode [ 'Makefile', 436, 420 ]
+124 silly gunzTarPerm extractEntry index.styl
+125 silly gunzTarPerm modified mode [ 'index.styl', 436, 420 ]
+126 verbose read json /var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package/package.json
+127 silly lockFile 9af35761-22882-0-2517898704390973-package tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package
+128 silly lockFile 9af35761-22882-0-2517898704390973-package tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package
+129 silly lockFile 505ba027-22882-0-2517898704390973-tmp-tgz tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/tmp.tgz
+130 silly lockFile 505ba027-22882-0-2517898704390973-tmp-tgz tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/tmp.tgz
+131 verbose from cache /var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package/package.json
+132 verbose tar pack [ '/Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz',
+132 verbose tar pack   '/var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package' ]
+133 verbose tarball /Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+134 verbose folder /var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package
+135 silly lockFile 9af35761-22882-0-2517898704390973-package tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package
+136 verbose lock tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package /Users/phillippa/.npm/9af35761-22882-0-2517898704390973-package.lock
+137 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+138 verbose lock tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz /Users/phillippa/.npm/21b1aea7-t-color-picker-2-1-9-package-tgz.lock
+139 silly lockFile 9af35761-22882-0-2517898704390973-package tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package
+140 silly lockFile 9af35761-22882-0-2517898704390973-package tar:///var/folders/qr/6y5062y136q5h8_zmghls8bm0000gn/T/npm-75910/1448316922882-0.2517898704390973/package
+141 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+142 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+143 silly lockFile a79e196a-react-color-picker-2-1-9-package /Users/phillippa/.npm/react-color-picker/2.1.9/package
+144 verbose lock /Users/phillippa/.npm/react-color-picker/2.1.9/package /Users/phillippa/.npm/a79e196a-react-color-picker-2-1-9-package.lock
+145 silly lockFile a79e196a-react-color-picker-2-1-9-package /Users/phillippa/.npm/react-color-picker/2.1.9/package
+146 silly lockFile a79e196a-react-color-picker-2-1-9-package /Users/phillippa/.npm/react-color-picker/2.1.9/package
+147 verbose tar unpack /Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+148 silly lockFile a5b1a745-react-color-picker-2-1-9-package tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package
+149 verbose lock tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package /Users/phillippa/.npm/a5b1a745-react-color-picker-2-1-9-package.lock
+150 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+151 verbose lock tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz /Users/phillippa/.npm/21b1aea7-t-color-picker-2-1-9-package-tgz.lock
+152 silly gunzTarPerm modes [ '755', '644' ]
+153 silly gunzTarPerm extractEntry package.json
+154 silly gunzTarPerm extractEntry .npmignore
+155 silly gunzTarPerm extractEntry README.md
+156 silly gunzTarPerm extractEntry LICENSE
+157 silly gunzTarPerm extractEntry stylus.config.js
+158 silly gunzTarPerm extractEntry Gulpfile.js
+159 silly gunzTarPerm extractEntry dist.config.js
+160 silly gunzTarPerm extractEntry dist.min.config.js
+161 silly gunzTarPerm extractEntry loaders.config.js
+162 silly gunzTarPerm extractEntry DIST_FILE_NAME.js
+163 silly gunzTarPerm extractEntry style.js
+164 silly gunzTarPerm extractEntry webpack.config.js
+165 silly gunzTarPerm extractEntry react-color-picker.sublime-project
+166 silly gunzTarPerm extractEntry index.html
+167 silly gunzTarPerm extractEntry lib/HueSpectrum.js
+168 silly gunzTarPerm extractEntry lib/SaturationSpectrum.js
+169 silly gunzTarPerm extractEntry lib/defaultColor.js
+170 silly gunzTarPerm extractEntry lib/index.js
+171 silly gunzTarPerm extractEntry lib/utils/DragHelper.js
+172 silly gunzTarPerm extractEntry lib/utils/color.js
+173 silly gunzTarPerm extractEntry lib/utils/common.js
+174 silly gunzTarPerm extractEntry lib/utils/toStringValue.js
+175 silly gunzTarPerm extractEntry lib/utils/validate.js
+176 silly gunzTarPerm extractEntry index.css
+177 silly gunzTarPerm extractEntry main.css
+178 silly gunzTarPerm extractEntry dist/react-color-picker.js
+179 silly gunzTarPerm extractEntry dist/react-color-picker.min.js
+180 silly gunzTarPerm extractEntry index.styl
+181 silly gunzTarPerm extractEntry src/defaultColor.js
+182 silly gunzTarPerm extractEntry src/HueSpectrum.jsx
+183 silly gunzTarPerm extractEntry src/SaturationSpectrum.jsx
+184 silly gunzTarPerm extractEntry src/index.jsx
+185 silly gunzTarPerm extractEntry src/utils/color.js
+186 silly gunzTarPerm extractEntry src/utils/common.js
+187 silly gunzTarPerm extractEntry src/utils/toStringValue.js
+188 silly gunzTarPerm extractEntry src/utils/validate.js
+189 silly gunzTarPerm extractEntry style/index.styl
+190 silly gunzTarPerm extractEntry bower.json
+191 silly gunzTarPerm extractEntry Makefile
+192 silly gunzTarPerm extractEntry test.html
+193 silly gunzTarPerm extractEntry index.jsx
+194 verbose read json /Users/phillippa/.npm/react-color-picker/2.1.9/package/package.json
+195 silly lockFile a5b1a745-react-color-picker-2-1-9-package tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package
+196 silly lockFile a5b1a745-react-color-picker-2-1-9-package tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package
+197 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+198 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+199 verbose from cache /Users/phillippa/.npm/react-color-picker/2.1.9/package/package.json
+200 verbose chmod /Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz 644
+201 verbose chown /Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz [ 501, 20 ]
+202 silly lockFile e3adf3d7-ker-react-color-picker-2-1-9-tgz https://registry.npmjs.org/react-color-picker/-/react-color-picker-2.1.9.tgz
+203 silly lockFile e3adf3d7-ker-react-color-picker-2-1-9-tgz https://registry.npmjs.org/react-color-picker/-/react-color-picker-2.1.9.tgz
+204 silly lockFile 31753dc4-react-color-picker-2-1-9 react-color-picker@2.1.9
+205 silly lockFile 31753dc4-react-color-picker-2-1-9 react-color-picker@2.1.9
+206 silly lockFile b530dd88-react-color-picker react-color-picker@
+207 silly lockFile b530dd88-react-color-picker react-color-picker@
+208 silly resolved [ { name: 'react-color-picker',
+208 silly resolved     version: '2.1.9',
+208 silly resolved     description: 'React Color Picker',
+208 silly resolved     main: 'lib/index.js',
+208 silly resolved     scripts:
+208 silly resolved      { test: 'make',
+208 silly resolved        start: 'npm run serve && npm run dev',
+208 silly resolved        serve: 'http-server',
+208 silly resolved        css: 'webpack --colors --progress --config stylus.config.js',
+208 silly resolved        lib: 'gulp && npm run css',
+208 silly resolved        dist: 'webpack --progress --colors --config dist.config.js',
+208 silly resolved        'dist.min': 'webpack --progress --colors --optimize-minimize --optimize-occurence-order --optimize-dedupe --config dist.min.config.js',
+208 silly resolved        build: 'npm run dist && npm run dist.min && npm run lib',
+208 silly resolved        dev: 'webpack-dev-server --progress --colors --port 8090' },
+208 silly resolved     keywords: [ 'react', 'react-component', 'color', 'picker', 'color-picker' ],
+208 silly resolved     dependencies:
+208 silly resolved      { 'drag-helper': '^1.2.3',
+208 silly resolved        'normalize.css': '^3.0.2',
+208 silly resolved        'object-assign': '^2.0.0',
+208 silly resolved        region: '^2.1.2',
+208 silly resolved        tinycolor2: '^1.1.1' },
+208 silly resolved     devDependencies:
+208 silly resolved      { 'babel-core': '^5.4.3',
+208 silly resolved        'babel-loader': '^5.1.2',
+208 silly resolved        'css-loader': '~0.9.0',
+208 silly resolved        'extract-text-webpack-plugin': '~0.3.1',
+208 silly resolved        gulp: '^3.8.11',
+208 silly resolved        'gulp-babel': '^5.1.0',
+208 silly resolved        'style-loader': '~0.8.1',
+208 silly resolved        'stylus-loader': '~0.4.0',
+208 silly resolved        webpack: '^1.9.7',
+208 silly resolved        'webpack-dev-server': '^1.8.2' },
+208 silly resolved     peerDependencies: { react: '>=0.12.0' },
+208 silly resolved     repository:
+208 silly resolved      { type: 'git',
+208 silly resolved        url: 'https://github.com/zippyui/react-color-picker.git' },
+208 silly resolved     bugs: { url: 'https://github.com/zippyui/react-color-picker/issues' },
+208 silly resolved     license: 'MIT',
+208 silly resolved     author: { name: 'ZippyUI', email: 'contact@zippyui.com' },
+208 silly resolved     readme: '# React Color Picker\n\n> A carefully crafted color picker for React.\n\nDemo: [jslog.com/react-color-picker](http://jslog.com/react-color-picker)\n\nNo images have been used in the making of this color picker :)\n\n![Color Picker](https://cloud.githubusercontent.com/assets/512416/5023604/0761ac7a-6aca-11e4-90db-d8678be7c267.PNG)\n\n## Install\n\n#### npm\n\n```sh\n$ npm install react-color-picker\n```\n\n#### Bower\n\n```sh\nbower install react-color-picker\n```\n\n#### Other\n\nUse `dist/react-color-picker.js`, which uses umd (exported as `ColorPicker`).\n\nUse version `>=2.0.0` for React `>=0.12.0`. For previous React versions, use `==1.4.1`.\n\n## Usage\n\n`react-color-picker` does not include `React` (not even in `dist/react-color-picker.js`) so you\'ll have to manually include that.\n\nYou can have either **controlled** (using **value**) or **uncontrolled** (using **defaultValue**) pickers.\n\n#### Please don\'t forget to include the styles!!! - `index.css` or `index.styl`\n\nExample (**controlled**)\n```jsx\n\nvar React = require(\'react\')\nvar ColorPicker = require(\'react-color-picker\')\n\nvar App = React.createClass({\n\n    displayName: \'App\',\n\n    onDrag: function(color, c){\n        COLOR = color\n        this.setState({})\n    },\n\n    render: function(){\n\n        return (\n            <div>\n                <ColorPicker value={COLOR} onDrag={this.onDrag} />\n                <div style={{background: COLOR, width: 100, height: 50, color: \'white\'}}>\n                    {COLOR}\n                </div>\n            </div>\n        )\n    }\n})\n\nReact.renderComponent(App(), document.body)\n\n```\n\nExample (**uncontrolled**)\n```jsx\nReact.renderComponent(\n    <ColorPicker defaultValue=\'#452135\'/>,\n    document.body\n)\n\n```\n\n## HueSpectrum\n\nYou can use only the hue spectrum if that is what you need.\n\n```jsx\nvar React = require(\'react\')\nvar HueSpectrum = require(\'react-color-picker\').HueSpectrum\n\n<HueSpectrum value={color} width={100}/>\n<HueSpectrum defaultValue="red" />\n```\n\n## SaturationSpectrum\n\nYou can use only the saturation spectrum if that is what you need.\n\n```jsx\nvar React = require(\'react\')\nvar SaturationSpectrum = require(\'react-color-picker\').SaturationSpectrum\n\n<SaturationSpectrum value={color} height={400}/>\n<SaturationSpectrum defaultValue="red" />\n```\n\n## Properties\n\nIt\'s best if you specify a fixed size for the color picker.\n\nAvailable options:\n\n * saturationWidth\n * saturationHeight\n * hueWidth\n * hueHeight (defaults to saturationHeight)\n\n```jsx\n<ColorPicker value={color} saturationWidth={400} saturationHeight={500} />\n<ColorPicker value={color} saturationWidth={400} saturationHeight={500} hueWidth={100}/>\n```\n\nYou can specify any other properties on the `ColorPicker`, including `className`, `style`, etc\nThe `ColorPicker` will always have a css class `color-picker`\n\nThe ColorPicker, the HueSpectrum and the SaturationSpectrum all accept `onDrag` and `onChange` callbacks.\n\n### onDrag(colorString)\n\nCalled during the dragging operation.\n\n### onChange(colorString)\n\nCalled after mouse up - when the color has been selected\n\n## Contributing\n\nUse [Github issues](https://github.com/zippyui/react-color-picker/issues) for feature requests and bug reports.\n\nWe actively welcome pull requests.\n\nFor setting up & starting the project locally, use:\n\n```sh\n$ git clone https://github.com/zippyui/react-color-picker\n$ cd react-color-picker\n$ npm install\n$ npm dev\n```\n\nNow navigate to [localhost:9090](http://localhost:9090/)\n\nBefore building a new version, make sure you run\n\n```sh\n$ npm run build\n```\nwhich compiles the `src` folder (which contains jsx & ES6 files) into the `lib` folder (only valid EcmaScript 5 files).\n\n## License\n\n#### MIT',
+208 silly resolved     readmeFilename: 'README.md',
+208 silly resolved     _id: 'react-color-picker@2.1.9',
+208 silly resolved     dist: { shasum: 'c3bc52d396c93a0d2fe21cc168588af4a44c0f0f' },
+208 silly resolved     _from: 'react-color-picker@',
+208 silly resolved     _resolved: 'https://registry.npmjs.org/react-color-picker/-/react-color-picker-2.1.9.tgz' } ]
+209 info install react-color-picker@2.1.9 into /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new
+210 info installOne react-color-picker@2.1.9
+211 verbose from cache /Users/phillippa/.npm/react-color-picker/2.1.9/package/package.json
+212 info /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker unbuild
+213 verbose read json /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker/package.json
+214 verbose tar unpack /Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+215 silly lockFile a1568a68--node-modules-react-color-picker tar:///Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker
+216 verbose lock tar:///Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker /Users/phillippa/.npm/a1568a68--node-modules-react-color-picker.lock
+217 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+218 verbose lock tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz /Users/phillippa/.npm/21b1aea7-t-color-picker-2-1-9-package-tgz.lock
+219 silly gunzTarPerm modes [ '755', '644' ]
+220 silly gunzTarPerm extractEntry package.json
+221 silly gunzTarPerm extractEntry .npmignore
+222 silly gunzTarPerm extractEntry README.md
+223 silly gunzTarPerm extractEntry LICENSE
+224 silly gunzTarPerm extractEntry stylus.config.js
+225 silly gunzTarPerm extractEntry Gulpfile.js
+226 silly gunzTarPerm extractEntry dist.config.js
+227 silly gunzTarPerm extractEntry dist.min.config.js
+228 silly gunzTarPerm extractEntry loaders.config.js
+229 silly gunzTarPerm extractEntry DIST_FILE_NAME.js
+230 silly gunzTarPerm extractEntry style.js
+231 silly gunzTarPerm extractEntry webpack.config.js
+232 silly gunzTarPerm extractEntry react-color-picker.sublime-project
+233 silly gunzTarPerm extractEntry index.html
+234 silly gunzTarPerm extractEntry lib/HueSpectrum.js
+235 silly gunzTarPerm extractEntry lib/SaturationSpectrum.js
+236 silly gunzTarPerm extractEntry lib/defaultColor.js
+237 silly gunzTarPerm extractEntry lib/index.js
+238 silly gunzTarPerm extractEntry lib/utils/DragHelper.js
+239 silly gunzTarPerm extractEntry lib/utils/color.js
+240 silly gunzTarPerm extractEntry lib/utils/common.js
+241 silly gunzTarPerm extractEntry lib/utils/toStringValue.js
+242 silly gunzTarPerm extractEntry lib/utils/validate.js
+243 silly gunzTarPerm extractEntry index.css
+244 silly gunzTarPerm extractEntry main.css
+245 silly gunzTarPerm extractEntry dist/react-color-picker.js
+246 silly gunzTarPerm extractEntry dist/react-color-picker.min.js
+247 silly gunzTarPerm extractEntry index.styl
+248 silly gunzTarPerm extractEntry src/defaultColor.js
+249 silly gunzTarPerm extractEntry src/HueSpectrum.jsx
+250 silly gunzTarPerm extractEntry src/SaturationSpectrum.jsx
+251 silly gunzTarPerm extractEntry src/index.jsx
+252 silly gunzTarPerm extractEntry src/utils/color.js
+253 silly gunzTarPerm extractEntry src/utils/common.js
+254 silly gunzTarPerm extractEntry src/utils/toStringValue.js
+255 silly gunzTarPerm extractEntry src/utils/validate.js
+256 silly gunzTarPerm extractEntry style/index.styl
+257 silly gunzTarPerm extractEntry bower.json
+258 silly gunzTarPerm extractEntry Makefile
+259 silly gunzTarPerm extractEntry test.html
+260 silly gunzTarPerm extractEntry index.jsx
+261 verbose read json /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker/package.json
+262 silly lockFile a1568a68--node-modules-react-color-picker tar:///Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker
+263 silly lockFile a1568a68--node-modules-react-color-picker tar:///Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker
+264 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+265 silly lockFile 21b1aea7-t-color-picker-2-1-9-package-tgz tar:///Users/phillippa/.npm/react-color-picker/2.1.9/package.tgz
+266 info preinstall react-color-picker@2.1.9
+267 verbose from cache /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker/package.json
+268 verbose readDependencies using package.json deps
+269 verbose from cache /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker/package.json
+270 verbose readDependencies using package.json deps
+271 verbose cache add [ 'normalize.css@^3.0.2', null ]
+272 verbose cache add name=undefined spec="normalize.css@^3.0.2" args=["normalize.css@^3.0.2",null]
+273 verbose parsed url { protocol: null,
+273 verbose parsed url   slashes: null,
+273 verbose parsed url   auth: null,
+273 verbose parsed url   host: null,
+273 verbose parsed url   port: null,
+273 verbose parsed url   hostname: null,
+273 verbose parsed url   hash: null,
+273 verbose parsed url   search: null,
+273 verbose parsed url   query: null,
+273 verbose parsed url   pathname: 'normalize.css@^3.0.2',
+273 verbose parsed url   path: 'normalize.css@^3.0.2',
+273 verbose parsed url   href: 'normalize.css@^3.0.2' }
+274 verbose cache add name="normalize.css" spec="^3.0.2" args=["normalize.css","^3.0.2"]
+275 verbose parsed url { protocol: null,
+275 verbose parsed url   slashes: null,
+275 verbose parsed url   auth: null,
+275 verbose parsed url   host: null,
+275 verbose parsed url   port: null,
+275 verbose parsed url   hostname: null,
+275 verbose parsed url   hash: null,
+275 verbose parsed url   search: null,
+275 verbose parsed url   query: null,
+275 verbose parsed url   pathname: '^3.0.2',
+275 verbose parsed url   path: '^3.0.2',
+275 verbose parsed url   href: '^3.0.2' }
+276 verbose addNamed [ 'normalize.css', '^3.0.2' ]
+277 verbose addNamed [ null, null ]
+278 silly lockFile caa7b193-normalize-css-3-0-2 normalize.css@^3.0.2
+279 verbose lock normalize.css@^3.0.2 /Users/phillippa/.npm/caa7b193-normalize-css-3-0-2.lock
+280 verbose cache add [ 'region@^2.1.2', null ]
+281 verbose cache add name=undefined spec="region@^2.1.2" args=["region@^2.1.2",null]
+282 verbose parsed url { protocol: null,
+282 verbose parsed url   slashes: null,
+282 verbose parsed url   auth: null,
+282 verbose parsed url   host: null,
+282 verbose parsed url   port: null,
+282 verbose parsed url   hostname: null,
+282 verbose parsed url   hash: null,
+282 verbose parsed url   search: null,
+282 verbose parsed url   query: null,
+282 verbose parsed url   pathname: 'region@^2.1.2',
+282 verbose parsed url   path: 'region@^2.1.2',
+282 verbose parsed url   href: 'region@^2.1.2' }
+283 verbose cache add name="region" spec="^2.1.2" args=["region","^2.1.2"]
+284 verbose parsed url { protocol: null,
+284 verbose parsed url   slashes: null,
+284 verbose parsed url   auth: null,
+284 verbose parsed url   host: null,
+284 verbose parsed url   port: null,
+284 verbose parsed url   hostname: null,
+284 verbose parsed url   hash: null,
+284 verbose parsed url   search: null,
+284 verbose parsed url   query: null,
+284 verbose parsed url   pathname: '^2.1.2',
+284 verbose parsed url   path: '^2.1.2',
+284 verbose parsed url   href: '^2.1.2' }
+285 verbose addNamed [ 'region', '^2.1.2' ]
+286 verbose addNamed [ null, null ]
+287 silly lockFile 1f813aee-region-2-1-2 region@^2.1.2
+288 verbose lock region@^2.1.2 /Users/phillippa/.npm/1f813aee-region-2-1-2.lock
+289 verbose cache add [ 'object-assign@^2.0.0', null ]
+290 verbose cache add name=undefined spec="object-assign@^2.0.0" args=["object-assign@^2.0.0",null]
+291 verbose parsed url { protocol: null,
+291 verbose parsed url   slashes: null,
+291 verbose parsed url   auth: null,
+291 verbose parsed url   host: null,
+291 verbose parsed url   port: null,
+291 verbose parsed url   hostname: null,
+291 verbose parsed url   hash: null,
+291 verbose parsed url   search: null,
+291 verbose parsed url   query: null,
+291 verbose parsed url   pathname: 'object-assign@^2.0.0',
+291 verbose parsed url   path: 'object-assign@^2.0.0',
+291 verbose parsed url   href: 'object-assign@^2.0.0' }
+292 verbose cache add name="object-assign" spec="^2.0.0" args=["object-assign","^2.0.0"]
+293 verbose parsed url { protocol: null,
+293 verbose parsed url   slashes: null,
+293 verbose parsed url   auth: null,
+293 verbose parsed url   host: null,
+293 verbose parsed url   port: null,
+293 verbose parsed url   hostname: null,
+293 verbose parsed url   hash: null,
+293 verbose parsed url   search: null,
+293 verbose parsed url   query: null,
+293 verbose parsed url   pathname: '^2.0.0',
+293 verbose parsed url   path: '^2.0.0',
+293 verbose parsed url   href: '^2.0.0' }
+294 verbose addNamed [ 'object-assign', '^2.0.0' ]
+295 verbose addNamed [ null, null ]
+296 silly lockFile 5a30528b-object-assign-2-0-0 object-assign@^2.0.0
+297 verbose lock object-assign@^2.0.0 /Users/phillippa/.npm/5a30528b-object-assign-2-0-0.lock
+298 verbose cache add [ 'tinycolor2@^1.1.1', null ]
+299 verbose cache add name=undefined spec="tinycolor2@^1.1.1" args=["tinycolor2@^1.1.1",null]
+300 verbose parsed url { protocol: null,
+300 verbose parsed url   slashes: null,
+300 verbose parsed url   auth: null,
+300 verbose parsed url   host: null,
+300 verbose parsed url   port: null,
+300 verbose parsed url   hostname: null,
+300 verbose parsed url   hash: null,
+300 verbose parsed url   search: null,
+300 verbose parsed url   query: null,
+300 verbose parsed url   pathname: 'tinycolor2@^1.1.1',
+300 verbose parsed url   path: 'tinycolor2@^1.1.1',
+300 verbose parsed url   href: 'tinycolor2@^1.1.1' }
+301 verbose cache add name="tinycolor2" spec="^1.1.1" args=["tinycolor2","^1.1.1"]
+302 verbose parsed url { protocol: null,
+302 verbose parsed url   slashes: null,
+302 verbose parsed url   auth: null,
+302 verbose parsed url   host: null,
+302 verbose parsed url   port: null,
+302 verbose parsed url   hostname: null,
+302 verbose parsed url   hash: null,
+302 verbose parsed url   search: null,
+302 verbose parsed url   query: null,
+302 verbose parsed url   pathname: '^1.1.1',
+302 verbose parsed url   path: '^1.1.1',
+302 verbose parsed url   href: '^1.1.1' }
+303 verbose addNamed [ 'tinycolor2', '^1.1.1' ]
+304 verbose addNamed [ null, null ]
+305 silly lockFile 4ed8d323-tinycolor2-1-1-1 tinycolor2@^1.1.1
+306 verbose lock tinycolor2@^1.1.1 /Users/phillippa/.npm/4ed8d323-tinycolor2-1-1-1.lock
+307 info addNameTag [ 'normalize.css', '^3.0.2' ]
+308 info addNameTag [ 'region', '^2.1.2' ]
+309 info addNameTag [ 'object-assign', '^2.0.0' ]
+310 verbose cache add [ 'drag-helper@^1.2.3', null ]
+311 verbose cache add name=undefined spec="drag-helper@^1.2.3" args=["drag-helper@^1.2.3",null]
+312 verbose parsed url { protocol: null,
+312 verbose parsed url   slashes: null,
+312 verbose parsed url   auth: null,
+312 verbose parsed url   host: null,
+312 verbose parsed url   port: null,
+312 verbose parsed url   hostname: null,
+312 verbose parsed url   hash: null,
+312 verbose parsed url   search: null,
+312 verbose parsed url   query: null,
+312 verbose parsed url   pathname: 'drag-helper@^1.2.3',
+312 verbose parsed url   path: 'drag-helper@^1.2.3',
+312 verbose parsed url   href: 'drag-helper@^1.2.3' }
+313 verbose cache add name="drag-helper" spec="^1.2.3" args=["drag-helper","^1.2.3"]
+314 verbose parsed url { protocol: null,
+314 verbose parsed url   slashes: null,
+314 verbose parsed url   auth: null,
+314 verbose parsed url   host: null,
+314 verbose parsed url   port: null,
+314 verbose parsed url   hostname: null,
+314 verbose parsed url   hash: null,
+314 verbose parsed url   search: null,
+314 verbose parsed url   query: null,
+314 verbose parsed url   pathname: '^1.2.3',
+314 verbose parsed url   path: '^1.2.3',
+314 verbose parsed url   href: '^1.2.3' }
+315 verbose addNamed [ 'drag-helper', '^1.2.3' ]
+316 verbose addNamed [ null, null ]
+317 silly lockFile f45793e6-drag-helper-1-2-3 drag-helper@^1.2.3
+318 verbose lock drag-helper@^1.2.3 /Users/phillippa/.npm/f45793e6-drag-helper-1-2-3.lock
+319 info addNameTag [ 'tinycolor2', '^1.1.1' ]
+320 verbose url raw normalize.css
+321 verbose url resolving [ 'https://registry.npmjs.org/', './normalize.css' ]
+322 verbose url resolved https://registry.npmjs.org/normalize.css
+323 info trying registry request attempt 1 at 23:15:23
+324 http GET https://registry.npmjs.org/normalize.css
+325 verbose url raw region
+326 verbose url resolving [ 'https://registry.npmjs.org/', './region' ]
+327 verbose url resolved https://registry.npmjs.org/region
+328 info trying registry request attempt 1 at 23:15:23
+329 http GET https://registry.npmjs.org/region
+330 verbose url raw object-assign
+331 verbose url resolving [ 'https://registry.npmjs.org/', './object-assign' ]
+332 verbose url resolved https://registry.npmjs.org/object-assign
+333 info trying registry request attempt 1 at 23:15:23
+334 http GET https://registry.npmjs.org/object-assign
+335 info addNameTag [ 'drag-helper', '^1.2.3' ]
+336 verbose url raw tinycolor2
+337 verbose url resolving [ 'https://registry.npmjs.org/', './tinycolor2' ]
+338 verbose url resolved https://registry.npmjs.org/tinycolor2
+339 info trying registry request attempt 1 at 23:15:23
+340 http GET https://registry.npmjs.org/tinycolor2
+341 verbose url raw drag-helper
+342 verbose url resolving [ 'https://registry.npmjs.org/', './drag-helper' ]
+343 verbose url resolved https://registry.npmjs.org/drag-helper
+344 info trying registry request attempt 1 at 23:15:23
+345 http GET https://registry.npmjs.org/drag-helper
+346 http 200 https://registry.npmjs.org/normalize.css
+347 silly registry.get cb [ 200,
+347 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+347 silly registry.get     etag: '"8YA41A1FY1CQAV94T5PWFGU75"',
+347 silly registry.get     'content-type': 'application/json',
+347 silly registry.get     'cache-control': 'max-age=60',
+347 silly registry.get     'content-length': '7772',
+347 silly registry.get     'accept-ranges': 'bytes',
+347 silly registry.get     date: 'Mon, 23 Nov 2015 22:15:21 GMT',
+347 silly registry.get     via: '1.1 varnish',
+347 silly registry.get     age: '44',
+347 silly registry.get     connection: 'keep-alive',
+347 silly registry.get     'x-served-by': 'cache-lhr6332-LHR',
+347 silly registry.get     'x-cache': 'HIT',
+347 silly registry.get     'x-cache-hits': '1',
+347 silly registry.get     'x-timer': 'S1448316921.838038,VS0,VE0',
+347 silly registry.get     vary: 'Accept' } ]
+348 silly lockFile caa7b193-normalize-css-3-0-2 normalize.css@^3.0.2
+349 silly lockFile caa7b193-normalize-css-3-0-2 normalize.css@^3.0.2
+350 verbose about to build /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker
+351 info /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker unbuild
+352 verbose from cache /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules/react-color-picker/package.json
+353 info preuninstall react-color-picker@2.1.9
+354 info uninstall react-color-picker@2.1.9
+355 verbose true,/Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules,/Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new/node_modules unbuild react-color-picker@2.1.9
+356 info postuninstall react-color-picker@2.1.9
+357 error Error: No compatible version found: normalize.css@'^3.0.2'
+357 error Valid install targets:
+357 error ["0.0.1","3.0.1","3.0.2","3.0.3"]
+357 error     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:719:10)
+357 error     at /usr/local/lib/node_modules/npm/lib/cache.js:641:10
+357 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+357 error     at Object.oncomplete (fs.js:107:15)
+358 error If you need help, you may report this log at:
+358 error     <http://github.com/isaacs/npm/issues>
+358 error or email it to:
+358 error     <npm-@googlegroups.com>
+359 error System Darwin 14.5.0
+360 error command "node" "/usr/local/bin/npm" "install" "react-color-picker" "--save"
+361 error cwd /Users/phillippa/Code/ads-stuff/react_rg/examples/rg_new
+362 error node -v v0.10.12
+363 error npm -v 1.2.32
+364 verbose exit [ 1, true ]
