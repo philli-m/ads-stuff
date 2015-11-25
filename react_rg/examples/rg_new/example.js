@@ -11,16 +11,39 @@ var Editor = React.createClass({
       targetNode = event.target,
       targetName = targetNode.getAttribute("name"),
       targetProp = targetNode.getAttribute("data-property"),
-      targetValue = targetNode.value;
+      targetValue;
+
+      // Note: the more 'React' way to do this is use a checkedLink
+      // https://facebook.github.io/react/docs/two-way-binding-helpers.html
+      if (targetNode.getAttribute("type") === "checkbox") {
+        targetValue = targetNode.checked;
+      } else {
+        targetValue = targetNode.value;
+      }
 
       changeSet[targetName] = {};
       changeSet[targetName][targetProp] = {$set: targetValue};
-
       var newState = React.addons.update(this.state, changeSet);
+
       this.setState(newState);
   },
 
+  shadowString: function (hasShadow) {
+    // returns the
+      if (hasShadow) {
+          return this.state.header.shadowStyle;
+      } else{
+          return "";
+      }
+
+  },
   render: function() {
+
+    var textshadowStyle = {
+      color: this.state.header.color,
+      textShadow: this.shadowString(this.state.header.hasShadow)
+    };
+
     return (
       <div>
         <div class="col-md-8" id="appInput">
@@ -28,6 +51,7 @@ var Editor = React.createClass({
             <div class="form-group">
               <label>Header</label><br></br>
               <InputText name="header" property="text" maxLength="30" value={this.state.header.text}  handleChange={this.handleChange} />
+              <TextShadow name="header" property="hasShadow" value={this.state.header.hasShadow} handleChange={this.handleChange} />
             </div>
 
             <div class="form-group">
@@ -67,7 +91,7 @@ var Editor = React.createClass({
         <div id="appOutput" name="adBackground"  style={{backgroundColor: this.state.adBackground.color}}>
           <a href="%%CLICK_URL_UNESC%%%%DEST_URL_ESC%%" target="_blank" class="rg-ad" id="rg-ad">
           <img class="rg-ad-img" id="rg-ad-img" src="#" />
-          <h3 style={{color: this.state.header.color}} >{this.state.header.text} </h3>
+          <h3 style={textshadowStyle} >{this.state.header.text} </h3>
           <p style={{color: this.state.paragraph.color}}>{this.state.paragraph.text}</p>
           <button style={{color: this.state.button.color, backgroundColor: this.state.buttonBackground.color}}> {this.state.button.text} </button>
           </a>
@@ -96,7 +120,7 @@ var InputColor = React.createClass({
 var TextShadow = React.createClass({
   render: function() {
     return (
-        <input name={this.props.name} type="checkbox" checked={this.props.property} data-property={this.props.property} onChange={this.props.handleChange}/>
+        <input name={this.props.name} type="checkbox" checked={this.props.value} data-property={this.props.property} onChange={this.props.handleChange} value={this.props.value} />
     );
   }
 });
@@ -105,7 +129,8 @@ var appData = {
   header: {
     text: "title",
     color: "black",
-
+    hasShadow: false,
+    shadowStyle: "#333 5px 5px 5px"
   },
   paragraph: {
     text: "Description",
